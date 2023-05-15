@@ -1,7 +1,20 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Press_Start_2P } from 'next/font/google'
+import { Rye } from 'next/font/google'
+import { Homemade_Apple } from 'next/font/google'
+import { Peralta } from 'next/font/google'
+import { Carattere } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const press = Press_Start_2P({subsets:['latin'],weight:'400',variable:'--font-pressStart2p'})
+const rye = Rye({weight:'400',subsets:['latin'],variable:'--font-rye'})
+
+const homemade_Apple = Homemade_Apple({weight:'400',subsets:['latin'],variable:'--font-homemadeApple'})
+
+const peralta = Peralta({weight:'400',subsets:['latin'],variable:'--font-peralta'})
+
+const carattere = Carattere({weight:'400',subsets:['latin'],variable:'--font-carattere'})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${press.variable} ${rye.variable} ${carattere.variable} ${peralta.variable} ${homemade_Apple.variable}`}>{children}</body>
     </html>
   )
 }

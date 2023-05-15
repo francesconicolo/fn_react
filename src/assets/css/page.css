@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.giorno{
+    background-image: url('../images/Sfondo/giorno.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 2s ease-in-out;
+    -moz-transition: background-image 2s ease-in-out;
+    -o-transition: background-image 2s ease-in-out;
+    transition: background-image 2s ease-in-out;
+
+}
+
+.notte{
+    background-image: url('../images/Sfondo/notte.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 2s ease-in-out;
+    -moz-transition: background-image 2s ease-in-out;
+    -o-transition: background-image 2s ease-in-out;
+    transition: background-image 2s ease-in-out;
+}
+
+.toDay{
+    background-image: url('../images/Sfondo/lunasole.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-10%);
+    transition: transform 2s;
+}
+
+
+.toNight{
+    background-image: url('../images/Sfondo/lunasole.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-60%);
+    transition: transform 2s;
+    
+}
+
+@keyframes cursors {
+    50% {border-color:transparent}
+}
+
+@keyframes typing {
+    from{width:0}
+}

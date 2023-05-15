@@ -1,113 +1,149 @@
-import Image from 'next/image'
-
+"use client";
+import Image from "next/image";
+import "../assets/css/page.css";
+import "../assets/css/switcher.css";
+import { useState } from "react";
+import Hat from "../assets/images/Sfondo/doug.png";
+import Meter from "../components/meter";
+import Carousel from "@/components/carousel";
+import temp from '../assets/images/clint.webp'
+import sam from '../assets/images/Sfondo/sam.png'
 export default function Home() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  const handleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className=" overflow-x-hidden">
+      <div className="h-[100vh] w-full overflow-hidden relative -z-10">
+        <div
+          className={
+            "absolute h-[200vh] w-full " +
+            (theme === "light" ? "toDay" : "toNight")
+          }
+        ></div>
+        <div
+          className={
+            "absolute h-full w-full " + (theme === "light" ? "giorno" : "notte")
+          }
+        ></div>
+        <div className="absolute flex flex-col justify-center items-center pb-28 h-full w-full left-0 top-0">
+          <div className="font-peralta font-bold text-black text-[1.2rem]">
+            directed by
+          </div>
+          <div
+            className={
+              "font-peralta text-[2rem] transition-colors duration-1000  " +
+              (theme === "light" ? "text-black" : "text-black")
+            }
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            Francesco Nicolo'
+          </div>
         </div>
       </div>
+      <div className="fixed bottom-5 right-5 z-50">
+        <label className="daynight text-[0.2rem]">
+          <input
+            type="checkbox"
+            className="daynight__checkbox"
+            onChange={handleTheme}
+            checked={theme === "dark"}
+          />
+          <span className="daynight__sky">
+            <span className="daynight__stars"></span>
+            <span className="daynight__morestars"></span>
+            <span className="daynight__sunmoon"></span>
+          </span>
+        </label>
+      </div>
+      <div
+        className={
+          "py-8 w-full relative " +
+          (theme === "light" ? "bg-Lantiquewhite" : "bg-Dantiflashwhite")
+        }
+      >
+        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full">
+          <div className="text-[2.5rem]">CHI SONO</div>
+          <div className="">nome:</div>
+          <div className="text-[2rem]">Francesco</div>
+          <div className="">cognome:</div>
+          <div className="text-[2rem]">Nicolo'</div>
+          <div className="">età:</div>
+          <div className="text-[2rem]">24 anni</div>
+          <div className="">professione:</div>
+          <div className="text-[2rem]">
+            Software <br /> developer
+          </div>
+          <div className="">foto (accurata) </div>
+          <div className="h-[100px] w-[300px]">
+            <Image src={temp} alt="" className="object-contain object-left h-full w-full"></Image>
+          </div>
+        </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+          src={Hat}
+          alt={""}
+          className="absolute top-[-80%] left-[38%] scale-[50%] sm:left-[60%] lg:top-[-60%] lg:scale-[55%] xl:left-[70%] xl:scale-[60%] xl:top-[-70%] 2xl:left-[70%] 2xl:scale-100 2xl:top-[-40%]"
+        ></Image>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={
+          "py-8 w-full " +
+          (theme === "light" ? "bg-Lhunyadiyellow text-black" : "bg-Dyaleblue text-Dantiflashwhite")
+        } >
+        <div className="container p-4 pb-32 mx-auto font-peralta shadow-lg h-full w-full ">
+          <div className="text-[2.5rem]">ABILITÀ</div>
+            <div className="text-[1.2rem]">Html/CSS</div>
+            <Meter value={5} theme={theme}/>
+            <div className="text-[1.2rem]">C/C++</div>
+            <Meter value={4} theme={theme}/>
+            <div className="text-[1.2rem]">Java</div>
+            <Meter value={3} theme={theme}/>
+            <div className="text-[1.2rem]">OCaml</div>
+            <Meter value={2} theme={theme}/>
+            <div className="text-[1.2rem]">Javascript</div>
+            <Meter value={3} theme={theme}/>
+            <div className="text-[1.2rem]">Python</div>
+            <Meter value={5} theme={theme}/>
+            <div className="text-[1.2rem]">SQL</div>
+            <Meter value={4} theme={theme}/>
+            <div className="text-[1.2rem]">Editing foto/video</div>
+            <Meter value={4} theme={theme}/>
+            <div className="text-[1.2rem]">Affettare salumi</div>
+            <Meter value={5} theme={theme}/>
+        </div>
+        
       </div>
-    </main>
-  )
+      <div className={
+          "py-8 w-full relative " +
+          (theme === "light" ? "bg-Lfalured text-black " : " bg-Dpennblue text-Dantiflashwhite ")
+        } >
+        <Image src={sam} alt="" className="absolute top-[-15%] left-[0%] z-0 " height={300} width={300}/>
+        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
+          <div className="text-[2.5rem] text-right">PROGETTI</div>
+          <div className="text-left">github:</div>
+          <a href="https://github.com/francesconicolo" className="text-[2rem] underline">francesconicolo</a>
+          <Carousel/>
+        </div>
+      </div>  
+
+      <div className={
+          "py-8 w-full relative " +
+          (theme === "light" ? "bg-Lantiquewhite text-black " : " bg-Dantiflashwhite text-black ")
+        } >
+        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
+          <div className="text-[2.5rem]">CONTATTI</div>
+          <div className="text-left">Email:</div>
+          <a href="mailto:nicolo.francesco.fn@gmail.com" className="text-[1.2rem] underline">nicolo.francesco.fn@gmail.com</a>
+          <div className="text-left">Social:</div>
+        </div>
+       
+      </div>                 
+    </div>
+  );
 }
