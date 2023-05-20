@@ -8,6 +8,11 @@ import Meter from "../components/meter";
 import Carousel from "@/components/carousel";
 import temp from '../assets/images/clint.webp'
 import sam from '../assets/images/Sfondo/sam.png'
+import facebook from '../assets/images/icons/icons8-facebook.svg'
+import instagram from '../assets/images/icons/icons8-instagram.svg'
+import gmail from '../assets/images/icons/icons8-gmail.svg'
+import Footer from "@/components/footer";
+
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -43,7 +48,7 @@ export default function Home() {
               (theme === "light" ? "text-black" : "text-black")
             }
           >
-            Francesco Nicolo'
+            Francesco Nicolo&apos;
           </div>
         </div>
       </div>
@@ -73,7 +78,7 @@ export default function Home() {
           <div className="">nome:</div>
           <div className="text-[2rem]">Francesco</div>
           <div className="">cognome:</div>
-          <div className="text-[2rem]">Nicolo'</div>
+          <div className="text-[2rem]">Nicolo&apos;</div>
           <div className="">età:</div>
           <div className="text-[2rem]">24 anni</div>
           <div className="">professione:</div>
@@ -89,7 +94,7 @@ export default function Home() {
         <Image
           src={Hat}
           alt={""}
-          className="absolute top-[-80%] left-[38%] scale-[50%] sm:left-[60%] lg:top-[-60%] lg:scale-[55%] xl:left-[70%] xl:scale-[60%] xl:top-[-70%] 2xl:left-[70%] 2xl:scale-100 2xl:top-[-40%]"
+          className="absolute top-[-100%] left-[38%] scale-[50%] sm:left-[60%] lg:top-[-60%] lg:scale-[55%] xl:left-[70%] xl:scale-[60%] xl:top-[-70%] 2xl:left-[70%] 2xl:scale-100 2xl:top-[-40%]"
         ></Image>
       </div>
       <div className={
@@ -138,12 +143,18 @@ export default function Home() {
         } >
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
           <div className="text-[2.5rem]">CONTATTI</div>
-          <div className="text-left">Email:</div>
-          <a href="mailto:nicolo.francesco.fn@gmail.com" className="text-[1.2rem] underline">nicolo.francesco.fn@gmail.com</a>
-          <div className="text-left">Social:</div>
+         <div className="flex items-center justify-between">
+          <Image src={gmail} alt="logo gmail"/>
+          <a href="mailto:nicolo.francesco.fn@gmail.com" className="text-[1rem] underline">nicolo.francesco.fn@gmail.com</a>
+         </div>
+          <div className="text-left pt-10">Social:</div>
+          <div className="flex items-center content-center justify-around">
+          <Image src={facebook} alt="logo facebook"/>
+          <Image src={instagram} alt="logo instagram"/>
+          </div>
         </div>
-       
       </div>                 
+      <Footer/>
     </div>
   );
 }
