@@ -3,12 +3,12 @@ import Image from "next/image";
 import "../assets/css/page.css";
 import "../assets/css/switcher.css";
 import { useState } from "react";
-import Hat from "../../public/images/Sfondo/doug.png";
-import temp from '../../public/images/clint.webp'
-import sam from '../../public/images/Sfondo/sam.png'
-import facebook from '../../public/images/icons/icons8-facebook.svg'
-import instagram from '../../public/images/icons/icons8-instagram.svg'
-import gmail from '../../public/images/icons/icons8-gmail.svg'
+import Hat from "/images/Sfondo/doug.png";
+import temp from '/images/clint.webp'
+import sam from '/images/Sfondo/sam.png'
+import facebook from '/images/icons/icons8-facebook.svg'
+import instagram from '/images/icons/icons8-instagram.svg'
+import gmail from '/images/icons/icons8-gmail.svg'
 
 import Footer from "@/components/footer";
 import Carousel from "@/components/carousel";
@@ -88,12 +88,12 @@ export default function Home() {
           </div>
           <div className="">foto (accurata) </div>
           <div className="h-[100px] w-[300px]">
-            <Image src={temp} alt="" className="object-contain object-left h-full w-full"></Image>
+            <Image src="/images/clint.webp" alt="" className="object-contain object-left h-full w-full"></Image>
           </div>
         </div>
 
         <Image
-          src={Hat}
+          src="/images/Sfondo/doug.png"
           alt={""}
           className="absolute top-[-100%] left-[38%] scale-[50%] sm:left-[60%] lg:top-[-60%] lg:scale-[55%] xl:left-[70%] xl:scale-[60%] xl:top-[-70%] 2xl:left-[70%] 2xl:scale-100 2xl:top-[-40%]"
         ></Image>
@@ -129,7 +129,7 @@ export default function Home() {
           "py-8 w-full relative " +
           (theme === "light" ? "bg-Lfalured text-black " : " bg-Dpennblue text-Dantiflashwhite ")
         } >
-        <Image src={sam} alt="" className="absolute top-[-15%] left-[0%] z-0 " height={300} width={300}/>
+        <Image src="/images/Sfondo/sam.png" alt="" className="absolute top-[-15%] left-[0%] z-0 " height={300} width={300}/>
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
           <div className="text-[2.5rem] text-right">PROGETTI</div>
           <div className="text-left">github:</div>
@@ -145,13 +145,13 @@ export default function Home() {
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
           <div className="text-[2.5rem]">CONTATTI</div>
          <div className="flex items-center justify-between">
-          <Image src={gmail} alt="logo gmail"/>
+          <Image src="/images/icons/icons8-gmail.svg" alt="logo gmail"/>
           <a href="mailto:nicolo.francesco.fn@gmail.com" className="text-[1rem] underline">nicolo.francesco.fn@gmail.com</a>
          </div>
           <div className="text-left pt-10">Social:</div>
           <div className="flex items-center content-center justify-around">
-          <Image src={facebook} alt="logo facebook"/>
-          <Image src={instagram} alt="logo instagram"/>
+          <Image src="/images/icons/icons8-facebook.svg" alt="logo facebook"/>
+          <Image src="/images/icons/icons8-instagram.svg" alt="logo instagram"/>
           </div>
         </div>
       </div>                 
