@@ -3,15 +3,16 @@ import Image from "next/image";
 import "../assets/css/page.css";
 import "../assets/css/switcher.css";
 import { useState } from "react";
-import Hat from "/images/Sfondo/doug.png";
-import Meter from "../components/meter";
-import Carousel from "@/components/carousel";
-import temp from '/images/clint.webp'
-import sam from '/images/Sfondo/sam.png'
-import facebook from 'images/icons/icons8-facebook.svg'
-import instagram from '/images/icons/icons8-instagram.svg'
-import gmail from '/images/icons/icons8-gmail.svg'
+import Hat from "../../public/images/Sfondo/doug.png";
+import temp from '../../public/images/clint.webp'
+import sam from '../../public/images/Sfondo/sam.png'
+import facebook from '../../public/images/icons/icons8-facebook.svg'
+import instagram from '../../public/images/icons/icons8-instagram.svg'
+import gmail from '../../public/images/icons/icons8-gmail.svg'
+
 import Footer from "@/components/footer";
+import Carousel from "@/components/carousel";
+import Meter from "@/components/meter";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
