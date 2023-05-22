@@ -3,14 +3,14 @@ import Image from "next/image";
 import "../assets/css/page.css";
 import "../assets/css/switcher.css";
 import { useState } from "react";
-import Hat from "../assets/images/Sfondo/doug.png";
+import Hat from "/images/Sfondo/doug.png";
 import Meter from "../components/meter";
 import Carousel from "@/components/carousel";
-import temp from '../assets/images/clint.webp'
-import sam from '../assets/images/Sfondo/sam.png'
-import facebook from '../assets/images/icons/icons8-facebook.svg'
-import instagram from '../assets/images/icons/icons8-instagram.svg'
-import gmail from '../assets/images/icons/icons8-gmail.svg'
+import temp from '/images/clint.webp'
+import sam from '/images/Sfondo/sam.png'
+import facebook from 'images/icons/icons8-facebook.svg'
+import instagram from '/images/icons/icons8-instagram.svg'
+import gmail from '/images/icons/icons8-gmail.svg'
 import Footer from "@/components/footer";
 
 export default function Home() {
