@@ -30,6 +30,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Francesco Nicolo&apos;</title>
+        <meta name="author" content="Francesco Nicolo'"></meta>
+        <meta name="description" content="Ciao! sono Francesco Nicolo' e questa è la mia pagina web"></meta>
+        <meta name="copyright" content="fnicolo.it"></meta>
+        <meta name="robots" content="all | none | index | noindex | follow | nofollow"></meta>
       </head>
       <body className={`${inter.className} ${press.variable} ${rye.variable} ${carattere.variable} ${peralta.variable} ${homemade_Apple.variable}`}>{children}</body>
     </html>
