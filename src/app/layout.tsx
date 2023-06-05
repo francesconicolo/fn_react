@@ -28,6 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Francesco Nicolo'</title>
+      </head>
       <body className={`${inter.className} ${press.variable} ${rye.variable} ${carattere.variable} ${peralta.variable} ${homemade_Apple.variable}`}>{children}</body>
     </html>
   )
