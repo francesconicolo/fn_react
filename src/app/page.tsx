@@ -4,11 +4,11 @@ import "../assets/css/page.css";
 import "../assets/css/switcher.css";
 import { useState } from "react";
 import Hat from "/images/Sfondo/doug.png";
-import temp from '/images/clint.webp'
-import sam from '/images/Sfondo/sam.png'
-import facebook from '/images/icons/icons8-facebook.svg'
-import instagram from '/images/icons/icons8-instagram.svg'
-import gmail from '/images/icons/icons8-gmail.svg'
+import temp from "/images/clint.webp";
+import sam from "/images/Sfondo/sam.png";
+import facebook from "/images/icons/icons8-facebook.svg";
+import instagram from "/images/icons/icons8-instagram.svg";
+import gmail from "/images/icons/icons8-gmail.svg";
 
 import Footer from "@/components/footer";
 import Carousel from "@/components/carousel";
@@ -88,7 +88,11 @@ export default function Home() {
           </div>
           <div className="">foto (accurata) </div>
           <div className="h-[100px] w-[300px]">
-            <img src="/images/clint.webp" alt="" className="object-contain object-left h-full w-full"></img>
+            <img
+              src="/images/clint.webp"
+              alt=""
+              className="object-contain object-left h-full w-full"
+            ></img>
           </div>
         </div>
 
@@ -98,64 +102,106 @@ export default function Home() {
           className="absolute top-[-100%] left-[38%] scale-[50%] sm:left-[60%] lg:top-[-60%] lg:scale-[55%] xl:left-[70%] xl:scale-[60%] xl:top-[-70%] 2xl:left-[70%] 2xl:scale-100 2xl:top-[-40%]"
         ></img>
       </div>
-      <div className={
+      <div
+        className={
           "py-8 w-full " +
-          (theme === "light" ? "bg-Lhunyadiyellow text-black" : "bg-Dyaleblue text-Dantiflashwhite")
-        } >
+          (theme === "light"
+            ? "bg-Lhunyadiyellow text-black"
+            : "bg-Dyaleblue text-Dantiflashwhite")
+        }
+      >
         <div className="container p-4 pb-32 mx-auto font-peralta shadow-lg h-full w-full ">
           <div className="text-[2.5rem]">ABILITÀ</div>
-            <div className="text-[1.2rem]">Html/CSS</div>
-            <Meter value={5} theme={theme}/>
-            <div className="text-[1.2rem]">C/C++</div>
-            <Meter value={4} theme={theme}/>
-            <div className="text-[1.2rem]">Java</div>
-            <Meter value={3} theme={theme}/>
-            <div className="text-[1.2rem]">OCaml</div>
-            <Meter value={2} theme={theme}/>
-            <div className="text-[1.2rem]">Javascript</div>
-            <Meter value={3} theme={theme}/>
-            <div className="text-[1.2rem]">Python</div>
-            <Meter value={5} theme={theme}/>
-            <div className="text-[1.2rem]">SQL</div>
-            <Meter value={4} theme={theme}/>
-            <div className="text-[1.2rem]">Editing foto/video</div>
-            <Meter value={4} theme={theme}/>
-            <div className="text-[1.2rem]">Affettare salumi</div>
-            <Meter value={5} theme={theme}/>
+          <div className="text-[1.2rem]">Html/CSS</div>
+          <Meter value={5} theme={theme} />
+          <div className="text-[1.2rem]">C/C++</div>
+          <Meter value={4} theme={theme} />
+          <div className="text-[1.2rem]">Java</div>
+          <Meter value={3} theme={theme} />
+          <div className="text-[1.2rem]">OCaml</div>
+          <Meter value={2} theme={theme} />
+          <div className="text-[1.2rem]">Javascript</div>
+          <Meter value={3} theme={theme} />
+          <div className="text-[1.2rem]">Python</div>
+          <Meter value={5} theme={theme} />
+          <div className="text-[1.2rem]">SQL</div>
+          <Meter value={4} theme={theme} />
+          <div className="text-[1.2rem]">Editing foto/video</div>
+          <Meter value={4} theme={theme} />
+          <div className="text-[1.2rem]">Affettare salumi</div>
+          <Meter value={5} theme={theme} />
         </div>
-        
       </div>
-      <div className={
+      <div
+        className={
           "py-8 w-full relative " +
-          (theme === "light" ? "bg-Lfalured text-black " : " bg-Dpennblue text-Dantiflashwhite ")
-        } >
-        <img src="/images/Sfondo/sam.png" alt="" className="absolute top-[-15%] left-[0%] z-0 " height={300} width={300}/>
+          (theme === "light"
+            ? "bg-Lfalured text-black "
+            : " bg-Dpennblue text-Dantiflashwhite ")
+        }
+      >
+        <img
+          src="/images/Sfondo/sam.png"
+          alt=""
+          className="absolute top-[-15%] left-[0%] z-0 "
+          height={300}
+          width={300}
+        />
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
           <div className="text-[2.5rem] text-right">PROGETTI</div>
           <div className="text-left">github:</div>
-          <a href="https://github.com/francesconicolo" className="text-[2rem] underline">francesconicolo</a>
-          <Carousel/>
+          <a
+            href="https://github.com/francesconicolo"
+            className="text-[2rem] underline"
+          >
+            francesconicolo
+          </a>
+          <Carousel />
         </div>
-      </div>  
+      </div>
 
-      <div className={
+      <div
+        className={
           "py-8 w-full relative " +
-          (theme === "light" ? "bg-Lantiquewhite text-black " : " bg-Dantiflashwhite text-black ")
-        } >
+          (theme === "light"
+            ? "bg-Lantiquewhite text-black "
+            : " bg-Dantiflashwhite text-black ")
+        }
+      >
+        <img
+          src="/images/lucky.png"
+          alt=""
+          className="absolute top-[-49%] right-0 lg:right-[10%] z-30 h-[350px] lg:h-[450px]"
+        />
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
-          <div className="text-[2.5rem]">CONTATTI</div>
-         <div className="flex items-center justify-between">
-          <img src="/images/icons/icons8-gmail.svg" alt="logo gmail"/>
-          <a href="mailto:nicolo.francesco.fn@gmail.com" className="text-[1rem] underline">nicolo.francesco.fn@gmail.com</a>
-         </div>
+          <div className="text-[2.5rem] mb-10">CONTATTI</div>
+          <div className="flex items-center justify-between">
+            <img src="/images/icons/icons8-gmail.svg" alt="logo gmail" />
+            <a
+              href="mailto:nicolo.francesco.fn@gmail.com"
+              className="text-[1rem] underline"
+            >
+              nicolo.francesco.fn@gmail.com
+            </a>
+          </div>
           <div className="text-left pt-10">Social:</div>
           <div className="flex items-center content-center justify-around">
-          <img src="/images/icons/icons8-facebook.svg" alt="logo facebook"/>
-          <img src="/images/icons/icons8-instagram.svg" alt="logo instagram"/>
+            <a href="https://www.facebook.com/francesco.nicolo.507">
+              <img
+                src="/images/icons/icons8-facebook.svg"
+                alt="logo facebook"
+              />
+            </a>
+            <a href="https://www.instagram.com/fra.nico_/">
+              <img
+                src="/images/icons/icons8-instagram.svg"
+                alt="logo instagram"
+              />
+            </a>
           </div>
         </div>
-      </div>                 
-      <Footer/>
+      </div>
+      <Footer />
     </div>
   );
 }
