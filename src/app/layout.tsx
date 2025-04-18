@@ -7,22 +7,11 @@ import { Peralta } from "next/font/google";
 import { Carattere } from "next/font/google";
 import { Updock } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
-const press = Press_Start_2P({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-pressStart2p",
-});
-const rye = Rye({ weight: "400", subsets: ["latin"], variable: "--font-rye" });
+
 const updock = Updock({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-updock",
-});
-const homemade_Apple = Homemade_Apple({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-homemadeApple",
 });
 
 const peralta = Peralta({
@@ -31,11 +20,6 @@ const peralta = Peralta({
   variable: "--font-peralta",
 });
 
-const carattere = Carattere({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-carattere",
-});
 
 export const metadata = {
   title: "simple portfolio of Francesco Nicolo'",
@@ -63,7 +47,7 @@ export default function RootLayout({
         ></meta>
       </head>
       <body
-        className={`${inter.className} ${press.variable} ${updock.variable} ${rye.variable} ${carattere.variable} ${peralta.variable} ${homemade_Apple.variable}`}
+        className={`${updock.variable} ${peralta.variable}`}
       >
         {children}
       </body>

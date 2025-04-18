@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .giorno {
   background-image: url("../images/Sfondo/giorno.png");
   background-size: cover;

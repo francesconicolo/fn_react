@@ -10,20 +10,14 @@ export default {
       colors: {
         Lantiquewhite: "#FEEEDFff",
         Dantiflashwhite: "#EEEEEEff",
-
         Lhunyadiyellow: "#FAC166ff",
         Dyaleblue: "#1D387Bff",
-
         Lfalured: "#741C1Cff",
         Dpennblue: "#141552ff",
       },
       fontFamily: {
-        press: ["var(--font-pressStart2p)"],
-        rye: ["var(--font-rye)"],
-        homemade: ["var(--font-homemadeApple)"],
-        peralta: ["var(--font-peralta)"],
-        carattere: ["var(--font-carattere)"],
-        Updock: ["var(--font-updock)"],
+        updock: ['var(--font-updock)', 'cursive'],
+        peralta: ['var(--font-peralta)'],
       },
     },
   },

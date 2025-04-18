@@ -74,25 +74,35 @@ export default function Home() {
           (theme === "light" ? "bg-Lantiquewhite" : "bg-Dantiflashwhite")
         }
       >
-        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full">
+        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full flex flex-col gap-4">
           <div className="text-[2.5rem]">CHI SONO</div>
-          <div className="">nome:</div>
-          <div className="text-[2rem]">Francesco</div>
-          <div className="">cognome:</div>
-          <div className="text-[2rem]">Nicolo&apos;</div>
-          <div className="">età:</div>
-          <div className="text-[2rem]">24 anni</div>
-          <div className="">professione:</div>
-          <div className="text-[2rem]">
-            Software <br /> developer
+          <div className="leading-6">
+            <div className="">nome</div>
+            <div className="text-[2rem]">Francesco</div>
           </div>
-          <div className="">foto (accurata) </div>
-          <div className="h-[100px] w-[300px]">
-            <img
-              src="/images/clint.webp"
-              alt=""
-              className="object-contain object-left h-full w-full"
-            ></img>
+          <div className="leading-6	">
+            <div className="">cognome</div>
+            <div className="text-[2rem]">Nicolo&apos;</div>
+          </div>
+          <div className="leading-6">
+            <div className="">età</div>
+            <div className="text-[2rem]">26 anni</div>
+          </div>
+          <div className="leading-6">
+            <div className="">Titolo</div>
+            <div className="text-[2rem]">
+              Laurea in informatica
+            </div>
+          </div>
+          <div className="leading-6">
+            <div className="">foto (accurata) </div>
+            <div className="h-[200px] w-[300px]">
+              <img
+                src="/images/clint.webp"
+                alt=""
+                className="object-contain object-left h-full w-full"
+              ></img>
+            </div>
           </div>
         </div>
 
@@ -119,9 +129,9 @@ export default function Home() {
           <div className="text-[1.2rem]">Java</div>
           <Meter value={3} theme={theme} />
           <div className="text-[1.2rem]">OCaml</div>
-          <Meter value={2} theme={theme} />
-          <div className="text-[1.2rem]">Javascript</div>
           <Meter value={3} theme={theme} />
+          <div className="text-[1.2rem]">Typescript</div>
+          <Meter value={4} theme={theme} />
           <div className="text-[1.2rem]">Python</div>
           <Meter value={5} theme={theme} />
           <div className="text-[1.2rem]">SQL</div>
@@ -140,23 +150,23 @@ export default function Home() {
             : " bg-Dpennblue text-Dantiflashwhite ")
         }
       >
-        <img
-          src="/images/Sfondo/sam.png"
-          alt=""
-          className="absolute top-[-15%] left-[0%] z-0 "
-          height={300}
-          width={300}
-        />
-        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
-          <div className="text-[2.5rem] text-right">PROGETTI</div>
-          <div className="text-left">github:</div>
+        <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40 relative">
+          <img
+            src="/images/Sfondo/sam.png"
+            alt=""
+            className="absolute top-[-230px] left-[-4%] z-0  "
+            height={300}
+            width={300}
+          />
+
+          <div className="italic">&quot;Vedi, in questo mondo ci sono due tipi di persone, amico mio; Quelli che programmano e quelli che copiano. Tu programmi.&quot;</div>
           <a
             href="https://github.com/francesconicolo"
-            className="text-[2rem] underline"
+            className="text-[0.8rem] underline text-right w-full"
           >
-            francesconicolo
+            - Francesco
           </a>
-          <Carousel />
+
         </div>
       </div>
 
@@ -171,7 +181,7 @@ export default function Home() {
         <img
           src="/images/lucky.png"
           alt=""
-          className="absolute top-[-49%] right-0 lg:right-[10%] z-30 h-[350px] lg:h-[450px]"
+          className="absolute top-[-140px] right-0 lg:right-[10%] z-30 h-[350px] lg:h-[450px]"
         />
         <div className="container p-4 mx-auto font-peralta shadow-lg h-full w-full pt-20 z-40">
           <div className="text-[2.5rem] mb-10">CONTATTI</div>
@@ -184,21 +194,7 @@ export default function Home() {
               nicolo.francesco.fn@gmail.com
             </a>
           </div>
-          <div className="text-left pt-10">Social:</div>
-          <div className="flex items-center content-center justify-around">
-            <a href="https://www.facebook.com/francesco.nicolo.507">
-              <img
-                src="/images/icons/icons8-facebook.svg"
-                alt="logo facebook"
-              />
-            </a>
-            <a href="https://www.instagram.com/fra.nico_/">
-              <img
-                src="/images/icons/icons8-instagram.svg"
-                alt="logo instagram"
-              />
-            </a>
-          </div>
+          
         </div>
       </div>
       <Footer />
