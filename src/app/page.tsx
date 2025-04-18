@@ -159,7 +159,7 @@ export default function Home() {
             width={300}
           />
 
-          <div className="italic">&quot;Vedi, in questo mondo ci sono due tipi di persone, amico mio; Quelli che programmano e quelli che copiano. Tu programmi.&quot;</div>
+          <div className="italic">&quot;Vedi, il mondo si divide in due categorie; Chi programma e chi copia. Tu programmi.&quot;</div>
           <a
             href="https://github.com/francesconicolo"
             className="text-[0.8rem] underline text-right w-full"
